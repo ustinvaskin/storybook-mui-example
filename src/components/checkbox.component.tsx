@@ -13,15 +13,17 @@ type CheckboxBaseProps = Pick<
 type CheckboxProps = CheckboxBaseProps & {
   label?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>, checked: boolean) => void;
+  checked?: boolean;
 };
 
 const StyledCheckbox = styled(Checkbox)(({ theme }) => ({}));
 
 const CustomCheckbox = ({ label, onChange, ...rest }: CheckboxProps) => {
-  const { ...otherProps } = rest;
+  const { checked = false, ...otherProps } = rest;
   return (
     <StyledCheckbox
       {...otherProps}
+      checked={checked}
       onChange={onChange}
       inputProps={{ 'aria-label': label }}
     />
@@ -32,7 +34,6 @@ CustomCheckbox.defaultProps = {
   color: 'primary',
   disabled: false,
   size:'medium',
-  checked: false,
 };
 
 export default CustomCheckbox;
