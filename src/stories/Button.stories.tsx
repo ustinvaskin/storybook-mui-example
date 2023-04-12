@@ -32,12 +32,28 @@ export const Variants: ComponentStory<typeof Button> = () => (
 );
 
 export const Colors: ComponentStory<typeof Button> = () => (
-  <Stack spacing={2} maxWidth={300}>
-    <Button variant="contained" label="Primary" />
-    <Button variant="contained" color="secondary" label="Secondary" />
-    <Button variant="contained" color="success" label="Success" />
-    <Button variant="contained" color="error" label="Error" />
-  </Stack>
+  <>
+    <Stack spacing={2} maxWidth={300}>
+      <Button variant="contained" label="Primary" />
+      <Button variant="contained" color="secondary" label="Secondary" />
+      <Button variant="contained" color="success" label="Success" />
+      <Button variant="contained" color="error" label="Error" />
+    </Stack>
+
+    {/* <Stack spacing={2} maxWidth={300}>
+      <Button variant="outlined" label="Primary" />
+      <Button variant="outlined" color="secondary" label="Secondary" />
+      <Button variant="outlined" color="success" label="Success" />
+      <Button variant="outlined" color="error" label="Error" />
+    </Stack>
+
+    <Stack spacing={2} maxWidth={300}>
+      <Button variant="text" label="Primary" />
+      <Button variant="text" color="secondary" label="Secondary" />
+      <Button variant="text" color="success" label="Success" />
+      <Button variant="text" color="error" label="Error" />
+    </Stack> */}
+  </>
 );
 
 export const Sizes: ComponentStory<typeof Button> = () => (
