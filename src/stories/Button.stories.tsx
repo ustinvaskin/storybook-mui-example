@@ -1,8 +1,12 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Stack from "@mui/material/Stack";
+import React from 'react';
 
-import { Button } from "../components/button.component";
+import Stack from '@mui/material/Stack';
+import {
+  ComponentMeta,
+  ComponentStory,
+} from '@storybook/react';
+
+import { Button } from '../components/button.component';
 
 export default {
   title: "Example/Button",
@@ -21,6 +25,9 @@ export const Variants: ComponentStory<typeof Button> = () => (
     <Button variant="text" label="Text Button" />
     <Button variant="contained" label="Contained Button" />
     <Button variant="outlined" label="Outlined Button" />
+    <Button variant="text" disabled={true} label="Text Button" />
+    <Button variant="contained" disabled={true} label="Contained Button" />
+    <Button variant="outlined" disabled={true} label="Outlined Button" />
   </Stack>
 );
 
