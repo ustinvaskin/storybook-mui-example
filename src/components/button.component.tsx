@@ -12,13 +12,18 @@ type ButtonBaseProps = Pick<MuiButtonProps, "variant" | "size" | "color">;
 // Include everything from MuiButtonProps except disableRipple
 // type ButtonBaseProps = Omit<MuiButtonProps, "disableRipple">;
 
-export interface ButtonProps extends ButtonBaseProps {
+
+type ButtonProps = ButtonBaseProps & {
   label: string;
 }
 
 export const StyledButton = styled(MuiButton)(({ theme }) => ({
-  heigh: '40px',
+  heigh: "40px",
   borderRadius: "100px",
+  boxShadow: "none",
+  "&:hover": {
+    boxShadow: "none",
+  },
 }));
 
 export const Button = ({ label, ...rest }: ButtonProps) => (
