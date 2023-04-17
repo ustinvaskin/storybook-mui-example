@@ -16,7 +16,7 @@ type SwitchProps = SwitchBaseProps & {
 
 const StyledSwitch = styled(Switch)(({ theme }) => ({}));
 
-const CustomSwitch = ({ label, onChange, ...rest }: SwitchProps) => {
+export const CustomSwitch = ({ label, onChange, ...rest }: SwitchProps) => {
   const { checked = false, ...otherProps } = rest;
   return (
     <StyledSwitch

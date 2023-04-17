@@ -16,7 +16,7 @@ type RadioButtonProps = RadioButtonBaseProps & {
 
 const StyledRadioButton = styled(Radio)(({ theme }) => ({}));
 
-const CustomRadioButton = ({ label, onChange, ...rest }: RadioButtonProps) => {
+export const CustomRadioButton = ({ label, onChange, ...rest }: RadioButtonProps) => {
   const { checked = false, ...otherProps } = rest;
   return (
     <StyledRadioButton

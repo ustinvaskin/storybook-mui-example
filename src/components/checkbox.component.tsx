@@ -18,7 +18,7 @@ type CheckboxProps = CheckboxBaseProps & {
 
 const StyledCheckbox = styled(Checkbox)(({ theme }) => ({}));
 
-const CustomCheckbox = ({ label, onChange, ...rest }: CheckboxProps) => {
+export const CustomCheckbox = ({ label, onChange, ...rest }: CheckboxProps) => {
   const { checked = false, ...otherProps } = rest;
   return (
     <StyledCheckbox
