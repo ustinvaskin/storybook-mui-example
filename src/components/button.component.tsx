@@ -18,12 +18,14 @@ type ButtonProps = ButtonBaseProps & {
 }
 
 export const StyledButton = styled(MuiButton)(({ theme }) => ({
-  heigh: "40px",
+  minHeigh: "40px",
   borderRadius: "100px",
+  fontSize:'14px',
   boxShadow: "none",
   "&:hover": {
     boxShadow: "none",
   },
+
 }));
 
 export const Button = ({ label, ...rest }: ButtonProps) => (
